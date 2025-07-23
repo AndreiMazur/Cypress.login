@@ -2,8 +2,8 @@ describe('Покупка аватара', function () {
 
    it('Верный пароль и верный логин', function () {
         cy.visit('https://pokemonbattle.ru/login');
-        cy.get('#k_email').type('mazur.andreimazur@yandex.ru')
-        cy.get('#k_password').type('Salut!9Mai')
+        cy.get('#k_email').type('USER_LOGIN')
+        cy.get('#k_password').type('USER_PASSWORD')
         cy.get('.MuiButton-root').click();
         cy.wait(2000);
         cy.get('.header_card_trainer').click();
