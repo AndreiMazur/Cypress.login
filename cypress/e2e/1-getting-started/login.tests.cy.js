@@ -31,7 +31,7 @@ describe('Проверка авторизации', function () {
     })
 
       it('Валидация на наличие @', function () {
-        cy.get(main_page.email).type('germandolnikov.ru');
+        cy.get(main_page.email).type('User_login');
         cy.get(main_page.password).type(data.password);
         cy.get(main_page.login_button).click();
         cy.get(result_page.title).should('be.visible');
@@ -64,3 +64,4 @@ describe('Проверка авторизации', function () {
   })
 
 // запуск через теринал: npx cypress run --spec cypress/e2e/login.cy.js --browser chrome2e/poke.cy.js --browser chrome
+
